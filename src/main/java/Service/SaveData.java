@@ -15,6 +15,8 @@ public class SaveData {
         String FileName = human.getSurname()+ ".txt";
         try (FileWriter fileWriter = new FileWriter(FileName, true)) {
             fileWriter.write(human.toString().concat("\n"));
+        }catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }
